@@ -66,14 +66,12 @@
     audio.currentTime = 0; //rewind to the start, so you can play in succession
     audio.play();
     key.classList.add('playing');
-  };
-
-
+  }
   function removeTransition(e) {
-    if (e.propertyName !== 'transition') return; // skip if it is not a transform
+    if (e.propertyName !== 'transform') return; // skip if it is not a transform
     this.classList.remove('playing');
 
-  };
+  }
 
 
 const keys = document.querySelectorAll('.key');
